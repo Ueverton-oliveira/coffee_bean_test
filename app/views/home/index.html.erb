@@ -1,0 +1,24 @@
+<section class="vh-100">
+  <div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+        <div class="mx-2">
+          <h4 class="d-1">Informações do Usuário </h4>
+          <span> <%= @user.name %> </span> - <strong>  <%= @user.email %> </strong>
+        </div>
+        <table class="table mt-2">
+          <tbody>
+          <tr>
+            <td><%= @ipInfo["city"]    %>   <i class="mx-1 bi bi-building"></i></td>
+            <td><%= @ipInfo["region"]  %>   <i class="mx-1 bi bi-geo"></i></td>
+            <td><%= @ipInfo["country"] %>   <i class="mx-1 bi bi-globe"></i></td>
+          </tr>
+          </tbody>
+        </table>
+        <div>
+          <%= link_to "Sair", logout_path, class:"btn btn-primary mt-2", method: :post %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
