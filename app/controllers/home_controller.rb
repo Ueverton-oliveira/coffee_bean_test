@@ -11,7 +11,7 @@ class HomeController < ApplicationController
   def request_infos
     ActiveSupport::JSON.decode(
       Net::HTTP.get(
-        URI("https://ipinfo.io/#{request.remote_ip}?token=" + ENV["IP_INFO_TOKEN"])
+        URI("https://ipinfo.io/45.188.182.178?token=" + ENV["IP_INFO_TOKEN"])
       )
     )
   end
